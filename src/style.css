@@ -1,0 +1,42 @@
+:root[data-theme="light"] {
+    --text: #0a101a;
+    --background: #f8fafc;
+    --primary: #1f334c;
+    --secondary: #ccd9ea;
+    --accent: #4470a7;
+}
+
+:root[data-theme="dark"] {
+    --text: #e6ecf5;
+    --background: #030507;
+    --primary: #b3c7e0;
+    --secondary: #152233;
+    --accent: #5885bb;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: auto; 
+}
+
+.remove-bad-link-properties {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.remove-bad-link-properties:hover {
+    color: var(--secondary);
+}
+
+button {
+    background-color: var(--secondary);
+    border: none;
+}
