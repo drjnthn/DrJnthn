@@ -1,17 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 :root[data-theme="light"] {
-    --text: #0a101a;
-    --background: #f8fafc;
-    --primary: #1f334c;
-    --secondary: #ccd9ea;
-    --accent: #4470a7;
+    --text: #333333;
+    --background: #f5f5f5;
+    --primary: #001f3f;
+    --secondary: #607d8b;
+    --accent: #0074cc;
 }
 
 :root[data-theme="dark"] {
-    --text: #e6ecf5;
-    --background: #030507;
-    --primary: #b3c7e0;
-    --secondary: #152233;
-    --accent: #5885bb;
+    --text: #ecf0f1;
+    --background: #2c3e50;
+    --primary: #001f3f;
+    --secondary: #607d8b;
+    --accent: #0074cc;
 }
 
 body {
@@ -20,23 +24,52 @@ body {
 }
 
 nav {
+    background-color: var(--secondary);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
-    margin-left: auto; 
+    margin-left: auto;
+    padding: 0 0 0 5%;
+    border-radius: 10rem;
 }
 
-.remove-bad-link-properties {
+nav p a {
+    color: white;
     text-decoration: none;
-    color: var(--text);
 }
 
-.remove-bad-link-properties:hover {
-    color: var(--secondary);
+nav p a:hover {
+    color: var(--primary);
 }
 
-button {
-    background-color: var(--secondary);
+#themeToggle {
+    background-color: var(--accent);
+    color: white;
     border: none;
+    border-radius: 5%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#themeToggle:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#themeToggle:active {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+        padding: 0 0 0 2vw;
+    }
+}
+
+@media (min-width: 950px) {
+    nav {
+        width: 30%;
+        padding: 0 0 0 2vw;
+    }
 }
