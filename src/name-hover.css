@@ -1,0 +1,35 @@
+:root[data-theme="light"] {
+    --text: #333333;
+    --background: #f5f5f5;
+    --primary: #001f3f;
+    --secondary: #607d8b;
+    --accent: #0074cc;
+}
+
+:root[data-theme="dark"] {
+    --text: #ecf0f1;
+    --background: #2c3e50;
+    --primary: #001f3f;
+    --secondary: #607d8b;
+    --accent: #0074cc;
+}
+
+.n,
+.a,
+#j,
+#o,
+#t,
+#h {
+    transition: 100ms ease-in-out;
+}
+
+.n:hover,
+.a:hover,
+#j:hover,
+#o:hover,
+#t:hover,
+#h:hover {
+    color: var(--accent);
+    transition: 100ms ease-in-out;
+}
+
